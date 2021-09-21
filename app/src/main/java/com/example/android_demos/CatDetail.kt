@@ -19,7 +19,7 @@ class CatDetail : AppCompatActivity() {
 //        val text = intent.getStringExtra("letter").toString()
         val name = intent.getStringExtra("letter")
 //        val image = intent.getStringExtra("image")
-val imageId = intent.extras!!.getInt("image")
+        val imageId = intent.extras!!.getInt("image")
         val tv = findViewById<TextView>(R.id.image_description)
         val im = findViewById<ImageView>(R.id.image)
         im.setImageResource(imageId)
