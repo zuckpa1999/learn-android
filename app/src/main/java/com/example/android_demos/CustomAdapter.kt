@@ -42,7 +42,7 @@ class CustomAdapter(private val list: List<ItemsViewModel>): RecyclerView.Adapte
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
              val intent =  Intent(context, CatDetail::class.java);
-            intent.putExtra("letter", "dasdsda")
+            intent.putExtra("letter", ItemsViewModel.catBreed)
             intent.putExtra("image",ItemsViewModel.catImage)
                 context.startActivity(intent);
 
