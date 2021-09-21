@@ -16,7 +16,7 @@ import java.lang.Override as Override1
 
 class CustomAdapter(private val list: List<ItemsViewModel>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-    // Holds the views for adding it to image and text
+    // Holds the views for adding it  to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.iv_cat)
         val textView: TextView = itemView.findViewById(R.id.tv_cat)
@@ -46,8 +46,10 @@ class CustomAdapter(private val list: List<ItemsViewModel>) :
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, CatDetail::class.java);
-            intent.putExtra("letter", ItemsViewModel.catBreed)
-            intent.putExtra("image", ItemsViewModel.catImage)
+            intent.putExtra("cat_breed", ItemsViewModel.catBreed)
+            intent.putExtra("cat_image", ItemsViewModel.catImage)
+            intent.putExtra("cat_origin", ItemsViewModel.CatOrigin)
+            intent.putExtra("cat_body_type", ItemsViewModel.CatBodyType)
             context.startActivity(intent);
 
         }

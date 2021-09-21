@@ -8,8 +8,11 @@ import com.example.android_demos.model.ItemsViewModel
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // standard
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         // getting the recyclerview by its id
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
@@ -21,24 +24,14 @@ class MainActivity : AppCompatActivity() {
         val data = ArrayList<ItemsViewModel>()
 
 
-
-
-
-        // This loop will create 20 Views containing
-        // the image with the count of view
-//        for (i in 1..20) {
-//            data.add(ItemsViewModel("dfasdsa", R.drawable.ic_baseline_folder_24))
-//        }
-
-
-        data.add(ItemsViewModel("Toyger",R.drawable.toyger))
-        data.add(ItemsViewModel("Ukrainian Levkoy",R.drawable.ukrainian_levkoy))
-        data.add(ItemsViewModel("Somali",R.drawable.somali))
-        data.add(ItemsViewModel("Persian",R.drawable.persian))
-        data.add(ItemsViewModel("Russian Blue",R.drawable.russian_blue))
-        data.add(ItemsViewModel("Savannah",R.drawable.savannah))
-        data.add(ItemsViewModel("Siamese",R.drawable.siamese))
-        data.add(ItemsViewModel("Siberian",R.drawable.siberian))
+        data.add(ItemsViewModel("Toyger",R.drawable.toyger,"United States","Moderate"))
+        data.add(ItemsViewModel("Ukrainian Levkoy",R.drawable.ukrainian_levkoy,"Ukraine","Moderate"))
+        data.add(ItemsViewModel("Somali",R.drawable.somali,"United States, Canada","Cobby"))
+        data.add(ItemsViewModel("Persian",R.drawable.persian,"Greater Iran","Cobby"))
+        data.add(ItemsViewModel("Russian Blue",R.drawable.russian_blue,"Russia","Moderate, Oriental"))
+        data.add(ItemsViewModel("Savannah",R.drawable.savannah,"United States","Large"))
+        data.add(ItemsViewModel("Siamese",R.drawable.siamese,"Thailand","Oriental"))
+        data.add(ItemsViewModel("Siberian",R.drawable.siberian,"Russia, Ukraine","Semi-cobby"))
 
 
 
@@ -47,5 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter
+
+
+
     }
+
+
 }

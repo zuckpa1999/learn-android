@@ -14,17 +14,26 @@ class CatDetail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cat_detail)
 
-
+        // receive data from CustomAdapter
         val intent = intent
-//        val text = intent.getStringExtra("letter").toString()
-        val name = intent.getStringExtra("letter")
-//        val image = intent.getStringExtra("image")
-        val imageId = intent.extras!!.getInt("image")
-        val tv = findViewById<TextView>(R.id.image_description)
-        val im = findViewById<ImageView>(R.id.image)
-        im.setImageResource(imageId)
-        tv.text = name
+        val receivedCatBreed = intent.getStringExtra("cat_breed")
+        val receivedCatOrigin = intent.getStringExtra("cat_origin")
+        val receivedCatBodyType = intent.getStringExtra("cat_body_type")
+        val imageId = intent.extras!!.getInt("cat_image")
 
-//        textt.text = "fsfsdfsd"
+        // get the ref for their view
+        val catBreed = findViewById<TextView>(R.id.cat_breed)
+        val catOrigin = findViewById<TextView>(R.id.cat_origin)
+        val catBodyType = findViewById<TextView>(R.id.cat_body_type)
+        val imageView = findViewById<ImageView>(R.id.image)
+
+
+        // hook them up
+        imageView.setImageResource(imageId)
+        catBreed.text = "Breed: ${receivedCatBreed}"
+        catOrigin.text = "Origin: ${receivedCatOrigin}"
+        catBodyType.text = "Body type: ${receivedCatBodyType}"
+
+
     }
 }
