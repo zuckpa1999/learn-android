@@ -24,6 +24,7 @@
         android:text="Canada"
         android:textColor="#000"
         android:textSize="20sp" />
+
     <TextView
         android:id="@+id/cat_origin"
         android:layout_width="wrap_content"
@@ -33,6 +34,7 @@
         android:text="Canada2"
         android:textColor="#000"
         android:textSize="20sp" />
+
     <TextView
         android:id="@+id/cat_body_type"
         android:layout_width="wrap_content"
@@ -42,5 +44,25 @@
         android:text="Canada3"
         android:textColor="#000"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/cat_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Canada3"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#EA4D83"
+        android:text="Get Age" />
+
 
 </LinearLayout>
